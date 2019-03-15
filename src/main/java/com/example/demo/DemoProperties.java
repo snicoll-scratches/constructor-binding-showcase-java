@@ -1,7 +1,7 @@
 package com.example.demo;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.ConfigurationPropertyDefaultValue;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 
 /**
  * Immutable configuration properties showcase.
@@ -15,8 +15,7 @@ public class DemoProperties {
 
 	private final int counter;
 
-	public DemoProperties(String name,
-			@ConfigurationPropertyDefaultValue("42") int counter) {
+	public DemoProperties(String name, @DefaultValue("42") int counter) {
 		this.name = name;
 		this.counter = counter;
 	}
