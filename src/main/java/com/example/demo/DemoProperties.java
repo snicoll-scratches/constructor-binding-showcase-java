@@ -11,8 +11,14 @@ import org.springframework.boot.context.properties.bind.DefaultValue;
 @ConfigurationProperties("demo")
 public class DemoProperties {
 
+	/**
+	 * Name of the demo property. Some more insight as what that property does.
+	 */
 	private final String name;
 
+	/**
+	 * Da counter.
+	 */
 	private final int counter;
 
 	public DemoProperties(String name, @DefaultValue("42") int counter) {
